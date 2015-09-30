@@ -1,19 +1,22 @@
+<div class="container">
 <h1> Welcome to BlogBlog </h1>
 
-Content goes here
 <br>
 
-  {{#each model as |post|}}
-     <h3> {{post.title}} </h3>
-     <h6> By {{post.user}} </h6>
-     <img src={{post.image}} class="home">
-     <br>
-     {{post.text}}
-     <hr />
-  {{/each}}
+  <div class="hometile">
+    {{#each model as |post|}}
+       <h3> {{post.title}} </h3>
+       <h6> By {{post.user}} </h6>
+       <img src={{post.image}} class="home">
+       <br><br>
+       {{post.text}}
+       <hr />
+    {{/each}}
+  </div>
 
 
 <br>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+</div>

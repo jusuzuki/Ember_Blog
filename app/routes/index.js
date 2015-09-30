@@ -5,7 +5,7 @@ var posts = [{
   user: "Totoro",
   title: "Favorite childhood movie",
   text: "In 1958 Japan, university professor Tatsuo Kusakabe and his two daughters, Satsuki and Mei, move into an old house to be closer to the hospital where their mother Yasuko is recovering from a long-term illness. Satsuki and Mei find that the house is inhabited by tiny animated dust creatures called susuwatari – small, dark, dust-like house spirits seen when moving from light to dark places.[note 1] When the girls become comfortable in their new house and laugh with their father, the soot spirits leave the house to drift away on the wind. It is implied that they are going to find another empty house – their natural habitat.",
-  image: "http://images2.fanpop.com/images/photos/4900000/Howl-s-Moving-Castle-howls-moving-castle-4919316-853-480.jpg"
+  image: "http://potinhodexp.files.wordpress.com/2009/10/calcifer.jpg"
 }, {
   id: 2,
   user: "Totoro",
