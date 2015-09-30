@@ -2,6 +2,7 @@ img.home {
   max-width: 400px;
 }
 
-div.hometile {
+div.posts {
   max-width: 400px;
+  margin-left: 20px;
 }

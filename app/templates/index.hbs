@@ -1,18 +1,12 @@
-<div class="container">
-<h1> Welcome to BlogBlog </h1>
 
-<br>
-
-  <div class="hometile">
+<div class="posts">
     {{#each model as |post|}}
       <!-- post=post is post(in component)=post(from template) -->
       {{post-tile post=post destroyPost="destroyPost" update="update"}}
     {{/each}}
-  </div>
-
+</div>
 
 {{new-post save="save"}}
 <br><br><br>
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
-</div>
