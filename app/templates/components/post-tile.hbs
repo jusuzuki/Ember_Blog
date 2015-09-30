@@ -1,9 +1,6 @@
-<h3> {{post.title}} </h3>
+<h3> {{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h3>
 <h6> By {{post.user}} </h6>
 <img src={{post.image}} class="home">
 <br><br>
-{{post.text}}
-<br><br>
-{{update-post post=post update="update"}}
-<button {{action 'delete' post}} class="btn btn-xs btn-danger">Delete Post</button>
+
 <hr/>
