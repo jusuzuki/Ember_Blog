@@ -15,7 +15,7 @@
 
 {{#each post.comments as |comment|}}
   <div class="well">
-    <strong>{{comment.user}}</strong>
+    <strong>{{comment.user}} commented at: {{format-date comment.date_added}}</strong>
     <br>
     {{comment.text}}
   </div>
