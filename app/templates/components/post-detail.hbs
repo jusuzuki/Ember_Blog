@@ -6,3 +6,14 @@
 <br><br>
 {{update-post post=post update="update"}}
 <button {{action 'delete' post}} class="btn btn-xs btn-danger">Delete Post</button>
+
+<hr>
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>
+      <strong>{{comment.user}}</strong>
+      <br>
+      {{comment.text}}
+    </li>
+  {{/each}}
+</ul>
