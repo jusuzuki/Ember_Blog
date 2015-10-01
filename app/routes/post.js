@@ -2,10 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return Ember.RSVP.hash({
-      posts: this.store.findRecord('post', params.post_id),
-      comments: this.store.findAll('rental')
-    });
+    return this.store.findRecord('post', params.post_id);
   },
 
   actions: {
@@ -24,10 +21,11 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    saveComment(post, params){
+    saveComment(params) {
+      debugger;
       var newComment = this.store.createRecord('comment', params);
       var post = params.post;
-      post.get('comment').addObject(newComment);
+      post.get('comments').addObject(newComment);
       newComment.save().then(function() {
         return post.save();
       });

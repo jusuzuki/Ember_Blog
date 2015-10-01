@@ -12,9 +12,9 @@
           {{input value=text id="text"}}
         </div>
 
-        <button {{action 'saveComment'}}>Save</button>
+        <button {{action 'saveComment'}} class="btn btn-xs btn-default">Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'commentFormShow'}}>New Comment</button>
+    <button {{action 'commentFormShow'}} class="btn btn-xs btn-default">New Comment</button>
 {{/if}}

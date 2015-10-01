@@ -8,6 +8,9 @@
 <button {{action 'delete' post}} class="btn btn-xs btn-danger">Delete Post</button>
 
 <hr>
+
+{{new-comment saveComment="saveComment" post=post}}
+
 <ul>
   {{#each model.comments as |comment|}}
     <li>

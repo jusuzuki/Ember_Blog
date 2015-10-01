@@ -1,14 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-  saveComment() {
-      var params = {
-        user: this.get('user'),
-        text: this.get('text'),
-      };
-      this.set('addNewComment', false);
-      this.sendAction('saveComment', post, params);
+  addNewComment: false,
+  actions: {
+    commentFormShow() {
+      this.set('addNewComment', true);
     },
 
+    saveComment() {
+      var params = {
+        user: this.get('user') ? this.get('user') : "",
+        text: this.get('text') ? this.get('text') : "",
+        post: this.get('post') ? this.get('post') : "",
+      };
+      this.set('addNewComment', false);
+      this.sendAction('saveComment', params);
+    },
+  }
 });

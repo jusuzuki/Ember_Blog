@@ -9,10 +9,10 @@ export default Ember.Component.extend({
 
     save() {
       var params = {
-        user: this.get('user'),
-        title: this.get('title'),
-        text: this.get('text'),
-        image: this.get('image'),
+        user: this.get('user') ? this.get('user') : "",
+        title: this.get('title') ? this.get('title') : "",
+        text: this.get('text') ? this.get('text') : "",
+        image: this.get('image') ? this.get('image') : "",
       };
       this.set('addNewPost', false);
       this.sendAction('save', params);
