@@ -12,15 +12,15 @@ export default Ember.Component.extend({
       }
     },
 
-    // maybe this will go into post-tile.js
     saveComment(params) {
-      var newComment = this.store.createRecord('comment', params);
-      var post = params.post;
-      post.get('comment').addObject(newComment);
-      newComment.save().then(function() {
-        return post.save();
-      });
-      this.transitionTo('post', params.post);
+      // var newComment = this.store.createRecord('comment', params);
+      // var post = params.post;
+      // post.get('comment').addObject(newComment);
+      // newComment.save().then(function() {
+      //   return post.save();
+      // });
+      // this.transitionTo('post', params.post);
+      this.sendAction('saveComment', post, params);
     }
   }
 });

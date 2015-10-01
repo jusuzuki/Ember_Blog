@@ -8,7 +8,7 @@ export default Ember.Component.extend({
         text: this.get('text'),
       };
       this.set('addNewComment', false);
-      this.sendAction('saveComment', params);
+      this.sendAction('saveComment', post, params);
     },
 
 });
