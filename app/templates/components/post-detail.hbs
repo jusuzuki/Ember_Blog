@@ -11,12 +11,12 @@
 
 {{new-comment saveComment="saveComment" post=post}}
 
-<ul>
-  {{#each model.comments as |comment|}}
-    <li>
-      <strong>{{comment.user}}</strong>
-      <br>
-      {{comment.text}}
-    </li>
-  {{/each}}
-</ul>
+<hr>
+
+{{#each post.comments as |comment|}}
+  <div class="well">
+    <strong>{{comment.user}}</strong>
+    <br>
+    {{comment.text}}
+  </div>
+{{/each}}
